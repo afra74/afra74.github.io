@@ -1,0 +1,306 @@
+@font-face {
+    font-family: moumou;
+    src: url(../font/三极素纤简体.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: moumou;
+}
+/* 菜单 */
+#menuToggle {
+    display: block;
+    position: fixed;
+    margin-top: calc(8vw);
+    margin-left: calc(8vw);
+    z-index: 500;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  
+  #menuToggle a {
+    text-decoration: none;
+    color: #e3e3e3;
+  
+    transition: color 0.3s ease;
+  }
+  
+  #menuToggle a:hover {
+    color: #7ad9ff;
+  }
+  
+  #menuToggle input {
+    display: block;
+    width: calc(10vw);
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+  
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+  
+    -webkit-touch-callout: none;
+  }
+  
+  /*
+   * Just a quick hamburger
+   */
+  #menuToggle span {
+    display: block;
+    width: calc(6vw);
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+  
+    background: #cdcdcd;
+    border-radius: 3px;
+  
+    z-index: 1;
+  
+    transform-origin: 4px 0px;
+  
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  }
+  
+  #menuToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+  
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+  
+  /* 
+   * Transform all the slices of hamburger
+   * into a crossmark.
+   */
+  #menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    /* 叉叉的颜色 */
+    background: #cdcdcd;
+  }
+  
+  /*
+   * But let's hide the middle one.
+   */
+  #menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  
+  #menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+  
+
+  #menu {
+    position: absolute;
+    width: calc(30vw);
+    height: calc(100vh);
+    margin: calc(-13vw) 0 0 calc(-10vw);
+    padding: calc(10vw);
+    padding-top: calc(15vw);
+    background: #0000007d;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+  
+  #menu li {
+    padding: 10px 0;
+    font-size:calc(3.5vw);
+    /* color: rgb(255, 255, 255); */
+  }
+  
+  /*
+   * And let's slide it in from the left
+   */
+  #menuToggle input:checked ~ ul {
+    transform: none;
+  }
+  
+/* 浏览器较小时 */
+@media only screen and (max-width: 600px){
+    /* 开始旅程 */
+    .begin{
+        width: 100%;
+        min-height: calc(100vh);
+       background: #000;
+       
+    }
+    .begin img{
+        width: 100%;
+        margin-top: calc(16vw);
+    }
+        /* 标题 */
+    .begin-h{
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        margin-top: calc(8vw);
+    }
+    .begin-h h2{
+        color: #7ad9ff;
+    }
+    .begin-h p{
+        color: #fff;
+        margin-top: calc(1vw);
+    }
+        /* 按钮 */
+    .begin .bb{
+        width: calc(50vw);
+        height: calc(10vw);
+        /* background: rgb(255, 250, 250);  */
+        border: solid 1px #7ad9ff;
+        box-shadow: inset 0 0 20px 2px #7ad9ff57;
+
+        /* box-shadow: inset 0 0 5px 2px #0eafb1a5; */
+        border-radius: 30px;
+        transform: translate(45%,0);
+        margin-top: calc(-2vw);
+    }
+    .bb a{
+        text-decoration:none;
+        color: #7ad9ff;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: block;
+        border-radius: 30px;
+        transition: all 0.7s;
+    }
+    .bb a p{
+        text-align: center;
+        line-height: calc(10vw);
+    }
+    .bb img{
+        width: calc(5vw);
+        position: absolute;
+        margin-top: calc(-7.5vw);
+        margin-left: calc(8vw);
+        transition: all 0.7s;
+    
+    }
+        /* 按钮效果 */
+    .bb a:hover{
+        color: #ffffff;
+        text-shadow: 0 0px 15px  #000;
+        background-color: #08babd;
+    }
+    .bb :hover  img{
+        margin-left: calc(35vw);
+    }
+
+    /* 背景 */
+    .out-choose{
+        /* background:#000; */
+        /* background: #3b3841; */
+        width: 100%;
+        background: url(../img/bg3.jpg);
+        background-size: cover;
+        background-position: center;
+        padding: 60px 0;
+        
+    }   
+    .out-choose::before{
+        content: "";
+        width: 100%;
+        height: 70%;
+        background: linear-gradient(to bottom,#000000,#3b384100);
+        position: absolute;
+        margin-top: -60px;
+    }
+    
+    /* 故事 */
+    .choose{
+        /* 样式设置 */
+        width: 65%;
+        /* border: solid 4px #23CFD3; */
+        /* background-color: #2a0b8171; */
+        border-radius: 20px;
+        /* 动画 */
+        transition: all 0.7s;
+        /* box-shadow: 5px 5px 10px #6b3ee4;; */
+        /* 位置设置 */
+        margin:  0 auto;
+        padding-bottom: 5vw;
+        /* 选项排列 */
+        display:flex;
+        flex-direction:column;
+        /* 选项居中 */
+        align-items: center;
+        /* 调整和遮罩的对应位置 */
+        position: relative;
+        z-index: 5;
+    }
+        /* 遮罩 */
+    .choose::after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        /* background-color: #00000027; */
+        border-radius: 20px;
+        z-index: -1;
+    } 
+        /* 背景图 */
+    .choose-img{
+        /* margin-top: calc(-70vw); */
+        position: absolute;
+        z-index: -1;
+        width: 50%;
+        left: calc(-10vw);
+        margin-top: 40%
+    }
+    /* 标题 */
+    .choose h1{
+        color: #daf6ff;
+        text-shadow: 0 0 20px rgba(10, 175, 230, 1),  0 0 20px rgba(10, 175, 230, 0);
+        margin: 20px;
+        font-size: 4vw;
+        /* text-shadow: #929bff 0 0 10px ; */
+    }
+    /* 选项样式 */
+    .choose div{
+        margin: 10px 0px;
+        height: calc(10vw);
+        width: 80%;
+        border: solid 1px #7ad9ff;
+        box-shadow: inset 0 0 20px 2px #7ad9ff57;
+        /* background: #23CFD3; */
+        background: rgba(35, 35, 35, 0.482);
+        /* 动效 */
+        transition: all 0.5s;
+        /* 内容排列 */
+        display:flex;
+        align-items: center;
+    }
+
+    .story img{
+        /* height: 50px; */
+        width: 10%;
+        margin: 10%  ;
+        /* margin-left: 10%; */
+    }
+    .story a{
+        color: #daf6ff;
+        text-shadow: 0 0 20px rgba(10, 175, 230, 1),  0 0 20px rgba(10, 175, 230, 0);
+        /* margin-left: 15%; */
+        font-size: 3vw;
+        margin:  0 auto;
+        width: 50%;
+        text-decoration: none;
+    }
+    /* 悬浮样式 */
+    .story:hover{
+        background-color: #08babd;;
+        /* border-radius: 40px; */
+    }
+}
