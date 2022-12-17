@@ -6,22 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChatGpt & novel</title>
     <link rel="stylesheet" href="css/home.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <div class="menu">
-        <ul>
-            <li>
-                <a href="#">登录</a>
-            </li>
-            <li>
-                <a href="#">互动故事</a>
-            </li>
-            <li>
-                <a href="#">填空故事</a>
-            </li>
-        </ul>
+    <div role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu">
+            <a href="#"><li>首页</li></a>
+            <a href="#"><li>登录</li></a>
+            <a href="#"><li>自由旅程</li></a>
+            <a href="#"><li>绿幕演出</li></a>
+          </ul>
+        </div>
+      </div>
+
+    <div class="begin">
+        <div class="begin-h">
+            <h2>选择 | 创造</h2>
+            <p>开启一段不同寻常的旅行</p>
+        </div>
+        <img src="img/begin.png" alt="浏览器无法显示图片">
+        <div class="bb"><a href="#one"><p>开始旅程</p> 
+        <img src="img/开始.png" alt="浏览器无法显示图片">
+        </a></div>
     </div>
-    <div class="out-choose">
+    <script src="js/home.js"></script>
+
+    <div class="out-choose" id="one">
         <div class="choose">
             <h1>选择故事背景</h1>
             <div class="story">
@@ -48,6 +63,7 @@
                 <img src="img/宇宙.png" alt="浏览器无法显示图片">
                 <a href="#">想不出来</a>
             </div>
+            <!-- <img src="img/bg3.jpg" alt="浏览器无法显示图片" class="choose-img"> -->
         </div>
     </div>
     
