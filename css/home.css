@@ -132,8 +132,10 @@
     .begin{
         width: 100%;
         min-height: calc(100vh);
-       background: #000;
-       
+        background: #000;
+        display: flex;
+        /* flex-direction: column; */
+        align-items: center;
     }
     .begin img{
         width: 100%;
@@ -145,6 +147,7 @@
         text-align: center;
         position: absolute;
         margin-top: calc(8vw);
+        
     }
     .begin-h h2{
         color: #7ad9ff;
@@ -203,16 +206,19 @@
         /* background:#000; */
         /* background: #3b3841; */
         width: 100%;
+        height: calc(100vh);
         background: url(../img/bg3.jpg);
         background-size: cover;
         background-position: center;
-        padding: 60px 0;
-        
+        padding:0 0 60px 0;
+        /* 内容居中 */
+        display: flex;
+        align-items: center;
     }   
     .out-choose::before{
         content: "";
         width: 100%;
-        height: 70%;
+        height: 100%;
         background: linear-gradient(to bottom,#000000,#3b384100);
         position: absolute;
         margin-top: -60px;
