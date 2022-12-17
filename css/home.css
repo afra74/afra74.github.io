@@ -49,7 +49,7 @@
    */
   #menuToggle span {
     display: block;
-    width: calc(6vw);
+    width: 32px;
     height: 4px;
     margin-bottom: 5px;
     position: relative;
