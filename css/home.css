@@ -8,21 +8,23 @@
     font-family: moumou;
 }
 
-body{
-  height:200vh !important;
-}
+
 .bg-snow-out .background-snow{
   position: relative !important;
   margin-top: calc(-200vh);
   z-index: 1;
 }
-.bg-snow-out2 .background-snow{
-  margin-top: calc(-140vh);
-  position: relative !important;
-}
+
 /* 浏览器较小时 */
 @media only screen and (max-width: 600px){
-    /* 菜单 */
+  .bg-snow-out2 .background-snow{
+    margin-top: calc(-140vh);
+    position: relative !important;
+  }
+  body{
+    height:200vh !important;
+  }  
+  /* 菜单 */
 #menuToggle {
     display: block;
     position: fixed;
@@ -148,6 +150,9 @@ body{
         align-items: center;
         /* flex-direction: column; */
     }
+    .begin .un-wide{
+      display: none;
+    }
     .begin .un{
         width: 80%;
         margin-top: calc(40vw);
@@ -234,121 +239,122 @@ body{
         margin-left: calc(32vw);
     }
 
-    .out-choose{
-      height: 100vh;
-      width: 100%;
-    }
 
-    .out-choose h1{
-      width: 100%;
-      color: #ffffff;
-      filter: drop-shadow(0 0 10px white);
-      text-align: center;
-      padding-top: 80px;
-    }
-    .choose{
-      display: flex;
-      width: calc(80vw);
-      justify-content: space-around;
-      flex-wrap: wrap;
-      transform: translate(-50%,0);
-      margin-left: 50%;
-      position: relative;
-      z-index: 1;
-    }
-    .choose a{
-      width: calc(35vw);
-      text-decoration: none;
-      color: #ffffff;
-      /* border: 2px solid #7ad9ff; */
-      border-radius: 30px;
-      margin-top: 40px;
-      background: rgb(32, 49, 67);
-    }
-
-    .choose a:nth-child(1) div{
-      position: absolute;
-      width: calc(35vw);
-      height: 160px;
-      border-radius:30px ;
-      z-index: -1;
-      margin: -160px 0 0 0px;
-      background-color: rgb(165, 42, 144);
-      transition: all 0.3s;
-    }
-    .choose a:nth-child(1):hover div {
-      margin-left: 10px;
-    }
-    .choose a:nth-child(1) img{
-      background: rgb(165, 42, 144);
-    }
-    
-
-    .choose a:nth-child(2) div{
-      position: absolute;
-      width: calc(35vw);
-      height: 160px;
-      border-radius:30px ;
-      z-index: -1;
-      margin: -160px 0 0 0px;
-      background-color: rgb(233, 131, 192);
-      transition: all 0.3s;
-    }
-    .choose a:nth-child(2):hover div {
-      margin-left: 10px;
-    }
-    .choose a:nth-child(2) img{
-      background: rgb(233, 131, 192);
-    }
-
-    .choose a:nth-child(3) div{
-      position: absolute;
-      width: calc(35vw);
-      height: 160px;
-      border-radius:30px ;
-      z-index: -1;
-      margin: -160px 0 0 0px;
-      background-color: rgb(244, 190, 73);
-      transition: all 0.3s;
-    }
-    .choose a:nth-child(3):hover div {
-      margin-left: 10px;
-    }
-    .choose a:nth-child(3) img{
-      background: rgb(244, 190, 73);
-    }
-
-    .choose a:nth-child(4) div{
-      position: absolute;
-      width: calc(35vw);
-      height: 160px;
-      border-radius:30px ;
-      z-index: -1;
-      margin: -160px 0 0 0px;
-      background-color: brown;
-      transition: all 0.3s;
-    }
-    .choose a:nth-child(4):hover div {
-      margin-left: 10px;
-    }
-    .choose a:nth-child(4) img{
-      background: brown;
-    }
-
-    .choose a h2{
-      text-align: center;
-      margin: 10px 0 20px 0;
-    }
-    .choose a img{
-      width: 50px;
-      
-      /* background-color: rgba(253, 36, 36, 0.664); */
-      padding: 10px;
-      border-radius: 43%;
-      transform: translate(-50%,0);
-      margin-left: 50%;
-      margin-top: 30px;
-      box-shadow: 0 0 10px 2px rgba(176, 176, 176, 0.187) ;
-    }
 }
 
+/* 选项 */
+.out-choose{
+  height: 100vh;
+  width: 100%;
+}
+
+.out-choose h1{
+  width: 100%;
+  color: #ffffff;
+  filter: drop-shadow(0 0 10px white);
+  text-align: center;
+  padding-top: 80px;
+}
+.choose{
+  display: flex;
+  width: calc(80vw);
+  justify-content: space-around;
+  flex-wrap: wrap;
+  transform: translate(-50%,0);
+  margin-left: 50%;
+  position: relative;
+  z-index: 1;
+}
+.choose a{
+  width: calc(35vw);
+  text-decoration: none;
+  color: #ffffff;
+  /* border: 2px solid #7ad9ff; */
+  border-radius: 30px;
+  margin-top: 40px;
+  background: rgb(32, 49, 67);
+}
+
+.choose a:nth-child(1) div{
+  position: absolute;
+  width: calc(35vw);
+  height: 160px;
+  border-radius:30px ;
+  z-index: -1;
+  margin: -160px 0 0 0px;
+  background-color: rgb(165, 42, 144);
+  transition: all 0.3s;
+}
+.choose a:nth-child(1):hover div {
+  margin-left: 10px;
+}
+.choose a:nth-child(1) img{
+  background: rgb(165, 42, 144);
+}
+
+
+.choose a:nth-child(2) div{
+  position: absolute;
+  width: calc(35vw);
+  height: 160px;
+  border-radius:30px ;
+  z-index: -1;
+  margin: -160px 0 0 0px;
+  background-color: rgb(233, 131, 192);
+  transition: all 0.3s;
+}
+.choose a:nth-child(2):hover div {
+  margin-left: 10px;
+}
+.choose a:nth-child(2) img{
+  background: rgb(233, 131, 192);
+}
+
+.choose a:nth-child(3) div{
+  position: absolute;
+  width: calc(35vw);
+  height: 160px;
+  border-radius:30px ;
+  z-index: -1;
+  margin: -160px 0 0 0px;
+  background-color: rgb(244, 190, 73);
+  transition: all 0.3s;
+}
+.choose a:nth-child(3):hover div {
+  margin-left: 10px;
+}
+.choose a:nth-child(3) img{
+  background: rgb(244, 190, 73);
+}
+
+.choose a:nth-child(4) div{
+  position: absolute;
+  width: calc(35vw);
+  height: 160px;
+  border-radius:30px ;
+  z-index: -1;
+  margin: -160px 0 0 0px;
+  background-color: brown;
+  transition: all 0.3s;
+}
+.choose a:nth-child(4):hover div {
+  margin-left: 10px;
+}
+.choose a:nth-child(4) img{
+  background: brown;
+}
+
+.choose a h2{
+  text-align: center;
+  margin: 10px 0 20px 0;
+}
+.choose a img{
+  width: 50px;
+  /* background-color: rgba(253, 36, 36, 0.664); */
+  padding: 10px;
+  border-radius: 43%;
+  transform: translate(-50%,0);
+  margin-left: 50%;
+  margin-top: 30px;
+  box-shadow: 0 0 10px 2px rgba(176, 176, 176, 0.187) ;
+}
