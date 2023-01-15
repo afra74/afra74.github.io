@@ -1,0 +1,108 @@
+@media only screen and (min-width: 601px){
+    body{
+        height:100%!important;
+      } 
+
+    /* ----------菜单------------------------ */
+    #menuToggle span{
+        display: none;
+    }
+    #menuToggle input{
+        display: none;
+    }
+    #menuToggle ul{
+        position: fixed;
+        z-index: 50;
+        top: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content:flex-end; 
+        width: 100%; 
+        background: rgba(0, 0, 0, 0.5);
+    }
+    #menuToggle ul a{
+        text-decoration: none;
+        padding: 0 2rem 0 2rem;
+        height: 5rem;
+        list-style-type: none;
+        display: block;
+        position: relative;
+        z-index: 50;
+        transition: all .7s;
+        /* 字体 */
+        text-align: center;
+        line-height: 5rem;
+        color:aliceblue;
+        font-size: 18px;
+        border-bottom: 2px solid  rgba(255, 255, 255, 0);
+    }
+    /* 效果 */
+    #menuToggle ul a:hover{
+        border-bottom: 2px solid  rgb(0, 162, 255);
+    }
+
+    /* ----------第一页--------------------------------------*/
+    /* 文字部分 */
+
+    .begin-h{
+        filter: drop-shadow(0 0 10px white);
+        /* width: 60%; */
+        /* position: absolute; */
+        margin: calc(35vh) 0 0 25%;
+        transform: translate(-50%,0);
+    }
+    .begin-h h2{
+        width: 100%;
+        text-align: center;
+        font-size: 3rem;
+        color: rgb(255, 255, 255);
+        margin-bottom: 20px;
+    }
+    .begin-h p{
+        width: 100%;
+        text-align: center;
+        font-size: 20px;
+        color: rgb(196, 218, 255);
+    }
+    .bb a{
+        /* width: calc(30vw); */
+        height: calc(10vw);
+        text-decoration: none;
+        /* border: 2px solid salmon; */
+        /* box-shadow: 0 0 5px 0 salmon; */
+        /* box-shadow: unset 0 0 5px 0 salmon; */
+        color:rgb(255, 255, 255);
+        margin: calc(35vh) 0 0 75%;
+        transform: translate(-50%,0);
+        position: absolute;
+        display: block;
+        top:0;
+    }
+    .bb p{
+        font-size: 3rem;
+    }
+    /* 图片 */
+    .un{
+        display: none;
+    }
+    .un-wide{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        margin-top: calc(100vh);
+        transform: translate(0,-70%);
+    }
+    .bb img{
+        display: none;
+    }
+
+    /* 选项 */
+    .out-choose{
+        margin-top: calc(58vh);
+        height: 100% !important;
+        padding-bottom: 100px;
+    }
+    .bg-snow-out2{
+        display: none;
+    }
+}
